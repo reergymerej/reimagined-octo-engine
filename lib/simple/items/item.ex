@@ -12,7 +12,7 @@ defmodule Simple.Items.Item do
   @doc false
   def changeset(item, attrs) do
     item
-    |> cast(attrs, [:text])
+    |> cast(attrs, [:text, :hidden])
     |> validate_required([:text])
   end
 end
