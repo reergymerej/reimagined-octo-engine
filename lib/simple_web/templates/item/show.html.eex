@@ -11,3 +11,4 @@
 
 <span><%= link "Edit", to: Routes.item_path(@conn, :edit, @item) %></span>
 <span><%= link "Back", to: Routes.item_path(@conn, :index) %></span>
+<span><%= link "Another", to: Routes.item_path(@conn, :new) %></span>

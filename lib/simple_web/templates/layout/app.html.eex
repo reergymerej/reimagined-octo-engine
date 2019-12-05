@@ -9,10 +9,17 @@
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
 
   </head>
-  <body>
+  <body class="p-8">
     <header>
       <section>
-        <h1>Simple</h1>
+        <h1>
+          <a href="<%= Routes.page_path(@conn, :index) %>">
+            Simple
+          </a>
+        </h1>
+          <a href="<%= Routes.item_path(@conn, :index) %>">
+            items
+          </a>
       </section>
     </header>
 
