@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Text</th>
+      <th>Hidden</th>
 
       <th></th>
     </tr>
@@ -12,6 +13,7 @@
 <%= for item <- @items do %>
     <tr>
       <td><%= item.text %></td>
+      <td><%= item.hidden %></td>
 
       <td>
         <span><%= link "Show", to: Routes.item_path(@conn, :show, item) %></span> |

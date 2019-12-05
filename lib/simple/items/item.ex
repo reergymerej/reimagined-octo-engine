@@ -4,6 +4,7 @@ defmodule Simple.Items.Item do
 
   schema "items" do
     field :text, :string
+    field :hidden, :boolean
 
     timestamps()
   end

@@ -7,6 +7,11 @@
     <%= @item.text %>
   </li>
 
+  <li>
+    <strong>Hidden:</strong>
+    <%= @item.hidden %>
+  </li>
+
 </ul>
 
 <span><%= link "Edit", to: Routes.item_path(@conn, :edit, @item) %></span> |
