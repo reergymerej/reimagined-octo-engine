@@ -1,18 +1,11 @@
 language: elixir
 elixir:
   - 1.8
-addons:
-  postresql: '10.9'
-service:
-  - postgresql
-before script:
-  - psql -c 'create database simple_test;' -U postgres
 env:
   - MIX_ENV=test
 script:
   - mix deps.get
   - mix compile
-  - mix test
   - mix cover
 after_success:
   - bash <(curl -s https://codecov.io/bash)
