@@ -4,9 +4,9 @@ defmodule SimpleWeb.ItemController do
   alias Simple.Items
   alias Simple.Items.Item
 
-  def index(conn, _params) do
+  def index(conn, %{"show_hidden" => show_hidden}) do
     items = Items.list_items()
-    render(conn, "index.html", items: items)
+    render(conn, "index.html", items: items, show_hidden: show_hidden)
   end
 
   def new(conn, _params) do

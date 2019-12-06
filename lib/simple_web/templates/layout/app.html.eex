@@ -17,7 +17,7 @@
             Simple
           </a>
         </h1>
-          <a href="<%= Routes.item_path(@conn, :index) %>">
+        <a href="<%= Routes.item_path(@conn, :index, %{show_hidden: "true"}) %>">
             items
           </a>
       </section>

@@ -6,7 +6,14 @@
       <th>Text</th>
       <th>Hidden</th>
 
-      <th></th>
+      <th>
+
+<%= if @show_hidden == "true" do %>
+  <%= link "Hide Hidden", to: Routes.item_path(@conn, :index, show_hidden: "false") %>
+<%= else %>
+  <%= link "Show Hidden", to: Routes.item_path(@conn, :index, show_hidden: "true") %>
+<% end %>
+      </th>
     </tr>
   </thead>
   <tbody>
