@@ -6,7 +6,6 @@ env:
 script:
   - mix deps.get
   - mix compile
-  - mix cover
 after_success:
   - bash <(curl -s https://codecov.io/bash)
   - mix deps.get --only docs
