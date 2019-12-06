@@ -9,6 +9,7 @@ script:
 after_success:
   - bash <(curl -s https://codecov.io/bash)
   - mix deps.get --only docs
+  - MIX_ENV=docs mix -h
   - MIX_ENV=docs mix inch.report
 after_failure:
   - mix deps.get --only docs
